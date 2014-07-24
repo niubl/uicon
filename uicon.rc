@@ -1,0 +1,29 @@
+//rc文件
+ 
+//>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+#include <resource.h>
+//>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+#define ICO_MAIN 100
+#define DLG_MAIN 1000
+#define IDC_FILE 101
+#define IDC_BROWSE 102
+#define ICO_ICON 103
+#define ICO_ICO 104
+#define IDC_HIDE 105
+//>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+ICO_MAIN ICON "main.ico" //竟然谁都的ID小，谁就做主图标？？晕死
+ICO_ICO ICON "main1.ico"
+//>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+DLG_MAIN DIALOG 100, 100, 270,50
+STYLE DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+CAPTION "ALL by 冰封血情 QQ:448354223"
+FONT 9, "宋体"
+{
+LTEXT "图标文件：", -1, 7, 8, 40, 8
+EDITTEXT IDC_FILE, 50, 5, 200, 12, ES_AUTOHSCROLL | WS_BORDER | WS_TABSTOP
+PUSHBUTTON "浏 览", IDC_BROWSE, 100, 22, 40, 14
+PUSHBUTTON "开 始", IDOK, 155, 22, 40, 14,WS_TABSTOP
+PUSHBUTTON "隐藏文件", IDC_HIDE, 210, 22, 40, 14
+ICON ICO_ICO,ICO_ICON,10,17,40,20,SS_ICON|WS_CHILD|WS_VISIBLE
+LTEXT "i love you~~", -1, 34, 23, 50, 8
+}
